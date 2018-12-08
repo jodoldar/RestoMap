@@ -1,0 +1,17 @@
+<h1>Listing Places</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Text</th>
+        <th></th>
+    </tr>
+
+    <% @places.each do |place| %>
+        <tr>
+            <td><%= place.title %></td>
+            <td><%= place.text %></td>
+            <td><%= link_to 'Show', place_path(place) %></td>
+        </tr>
+    <% end %>
+<table>
