@@ -27,3 +27,4 @@ Ruby version: 2.5.1
 [![CircleCI](
 https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser/master.svg
 )](https://circleci.com/gh/jodoldar/RestoMap/tree/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/00fa85ce3bf8f0ae0c13/maintainability)](https://codeclimate.com/github/jodoldar/RestoMap/maintainability)
