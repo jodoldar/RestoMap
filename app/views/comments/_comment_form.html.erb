@@ -1,0 +1,13 @@
+<%= form_with(model: [ @place, @place.comments.build ], local: true) do |form| %>
+    <p>
+        <%= form.label :user %><br>
+        <%= form.text_field :user %>
+    </p>
+    <p>
+        <%= form.label :comment %><br>
+        <%= form.text_area :comment %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
