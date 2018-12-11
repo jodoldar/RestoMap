@@ -6,7 +6,15 @@
 <p>
     <strong>Text:</strong>
     <%= @place.text %>
-</p>    
+</p>
+
+<h2>Comments</h2>
+<% @place.comments.each do |comment| %>
+    <%= render 'comments/comment_show', :comment => comment %>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/comment_form' %>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
