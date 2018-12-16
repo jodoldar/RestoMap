@@ -1,4 +1,4 @@
-initMap = function(lat, lng) {
+function initMap(lat, lng) {
     var myCoords = L.latLng(lat,lng);
 
     var mapOptions = {
