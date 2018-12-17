@@ -1,0 +1,9 @@
+---
+plugins:
+  rubocop:
+    enabled: true
+    checks:
+      Rubocop/Style/RedundantReturn:
+        enabled: false
+      Rubocop/Style/SymbolArray:
+        enabled: false

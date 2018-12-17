@@ -1,3 +1,10 @@
+<% provide :head_tags do %>
+    <meta name='turbolinks-visit-control' content='reload')>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){createMap(<%=@averages[0]%>,<%=@averages[1]%>)});
+    </script>
+<% end %>
+
 <%= form_with model: @place, local: true do |form| %>
 
     <% if @place.errors.any? %>
@@ -24,6 +31,26 @@
     </p>
 
     <p>
+        <%= form.label :latitude %><br>
+        <%= form.text_field :latitude %>
+    </p>
+
+    <p>
+        <%= form.label :longitude %><br>
+        <%= form.text_field :longitude %>
+    </p>
+
+    <p>
+        <div id='createMap'></div>
+    </p>
+
+    <p>
         <%= form.submit %>
     </p>
+
+    <script>
+    // when input values change call refreshMarker
+document.getElementById('place_latitude').onchange = refreshMarker;
+document.getElementById('place_longitude').onchange = refreshMarker;
+    </script>
 <% end %>
