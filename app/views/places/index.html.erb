@@ -1,3 +1,10 @@
+<% provide :head_tags do %>
+    <meta name='turbolinks-visit-control' content='reload')>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){indexMap(<%=@averages[0]%>,<%=@averages[1]%>,<%=@positions%>)});
+    </script>
+<% end %>
+
 <h1>Listing Places</h1>
 
 <%= link_to 'New Restaurant', new_place_path %>
@@ -19,3 +26,7 @@
         </tr>
     <% end %>
 <table>
+
+<p>
+    <div id='indexMap'></div>
+</p>
