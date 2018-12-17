@@ -2,5 +2,5 @@
 
 # Default controller
 class ApplicationController < ActionController::Base
-    # Nothing to do here
+  # Nothing to do here
 end
