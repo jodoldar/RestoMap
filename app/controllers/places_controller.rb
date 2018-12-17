@@ -27,6 +27,7 @@ class PlacesController < ApplicationController
 
   def edit
     @place = Place.find(params[:id])
+    @averages = [@place.latitude, @place.longitude]
   end
 
   def update
