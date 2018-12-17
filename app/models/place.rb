@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-# Clase Place, principal en la aplicación
+
+# Clase Place, principal en la aplicacion
 class Place < ApplicationRecord
   has_many :comments, dependent: :destroy
   validates :title, presence: true,

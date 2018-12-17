@@ -1,5 +1,7 @@
-class CommentsController < ApplicationController
+# frozen_string_literal: true
 
+# Comments controller
+class CommentsController < ApplicationController
   def create
     @place = Place.find(params[:place_id])
     @comment = @place.comments.create(comment_params)
@@ -13,7 +15,8 @@ class CommentsController < ApplicationController
     redirect_to place_path(@place)
   end
 
-private
+  private
+
   def comment_params
     params.require(:comment).permit(:user, :comment)
   end

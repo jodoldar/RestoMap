@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Places controller
 class PlacesController < ApplicationController
   def new
     @place = Place.new
@@ -47,7 +50,7 @@ class PlacesController < ApplicationController
     redirect_to places_path
   end
 
-private
+  private
 
   def place_params
     params.require(:place).permit(:title, :text, :latitude, :longitude)
@@ -60,10 +63,10 @@ private
       lat_avg += place.latitude
       lon_avg += place.longitude
     end
-    lat_avg = lat_avg / places.length
-    lon_avg = lon_avg / places.length
+    lat_avg /= places.length
+    lon_avg /= places.length
 
-    return [lat_avg,lon_avg]
+    return [lat_avg, lon_avg]
   end
 
   def all_positions(places)
