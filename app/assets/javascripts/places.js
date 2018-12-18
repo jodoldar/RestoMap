@@ -27,8 +27,12 @@ function indexMap(lat, lng, places) {
     }).addTo(map);
 
     for (place in places) {
-        L.marker(place).addTo(map)
+        L.marker(place).addTo(map);
     }
+
+    places.forEach(place => {
+        console.log(place);
+    });
 }
 
 var createMarker;
