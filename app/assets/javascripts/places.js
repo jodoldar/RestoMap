@@ -26,12 +26,8 @@ function indexMap(lat, lng, places) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    for (place in places) {
-        L.marker(place).addTo(map);
-    }
-
     places.forEach(place => {
-        console.log(place);
+        L.marker(place).addTo(map);
     });
 }
 
