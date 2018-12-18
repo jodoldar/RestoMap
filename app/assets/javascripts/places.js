@@ -27,7 +27,7 @@ function indexMap(lat, lng, places) {
     }).addTo(map);
 
     places.forEach(place => {
-        L.marker(place).addTo(map);
+        L.marker(place).addTo(map)
     });
 }
 
@@ -53,8 +53,10 @@ function createMap(lat, lng) {
 
     createMarker.on('drag', function(){
         latlng = createMarker.getLatLng();
-        document.getElementById('place_latitude').value = latlng.lat;
-        document.getElementById('place_longitude').value = latlng.lng;
+        if (latlng != null){
+            document.getElementById('place_latitude').value = latlng.lat;
+            document.getElementById('place_longitude').value = latlng.lng;
+        }
     });
 }
 
