@@ -26,9 +26,9 @@ function indexMap(lat, lng, places) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    places.forEach(place => {
+    for (place in places) {
         L.marker(place).addTo(map)
-    });
+    }
 }
 
 var createMarker;
@@ -37,7 +37,7 @@ function createMap(lat, lng) {
     var latitude = document.getElementById('place_latitude').value = lat;
     var longitude = document.getElementById('place_longitude').value = lng;
 
-    var myCoords = L.latLng(lat,lng);
+    var myCoords = Leaflet.latLng(lat,lng);
 
     var mapOptions = {
         center: myCoords,
