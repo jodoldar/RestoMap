@@ -29,7 +29,7 @@ function indexMap(lat, lng, places) {
     for (i = 0; i<places.length; i++){
         console.log(i);
         console.log(places[i]);
-        console.log(L.marker(places[i]));
+        L.marker(places[i]).addTo(map);
     }
     console.log(places);
 }
