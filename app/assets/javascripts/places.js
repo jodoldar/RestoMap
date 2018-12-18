@@ -26,6 +26,10 @@ function indexMap(lat, lng, places) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+    for (i = 0; i<places.length; i++){
+        console.log(i);
+        console.log(places[i]);
+    }
     console.log(places);
 }
 
