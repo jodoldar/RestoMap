@@ -37,7 +37,7 @@ function createMap(lat, lng) {
     var latitude = document.getElementById('place_latitude').value = lat;
     var longitude = document.getElementById('place_longitude').value = lng;
 
-    var myCoords = L.latLng(lat,lng);
+    var myCoords = Leaflet.latLng(lat,lng);
 
     var mapOptions = {
         center: myCoords,
