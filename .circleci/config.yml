@@ -6,6 +6,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.5.1-node-browsers
         environment:
+          DATABASE_URL: "postgres://restomap@localhost/test_restomap"
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
