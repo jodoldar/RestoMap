@@ -26,7 +26,7 @@ function indexMap(lat, lng, places) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    for (const place in places) {
+    for (place in places) {
         L.marker(place).addTo(map)
     }
 }
