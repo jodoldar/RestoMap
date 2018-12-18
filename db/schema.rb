@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2018_12_16_160045) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.string "user"
     t.text "comment"
-    t.integer "place_id"
+    t.bigint "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_comments_on_place_id"
@@ -30,4 +33,5 @@ ActiveRecord::Schema.define(version: 2018_12_16_160045) do
     t.decimal "longitude"
   end
 
+  add_foreign_key "comments", "places"
 end
