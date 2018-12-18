@@ -26,9 +26,9 @@ function indexMap(lat, lng, places) {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    places.forEach(place => {
+    for (place in places) {
         L.marker(place).addTo(map)
-    });
+    }
 }
 
 var createMarker;
