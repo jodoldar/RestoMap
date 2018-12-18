@@ -12,6 +12,10 @@ jobs:
           PGHOST: 127.0.0.1
           PGUSER: root
           RAILS_ENV: test
+      - image: postgres:9.5-alpine
+        environment:
+          POSTGRES_USER: restomap
+          POSTGRES_DB: test_restomap
     steps:
       - checkout
 
