@@ -4,29 +4,29 @@
         document.addEventListener("DOMContentLoaded", function(){indexMap(<%=@averages[0]%>,<%=@averages[1]%>,<%=@positions%>)});
     </script>
 <% end %>
-
-<h1>Listing Places</h1>
-
-<%= link_to 'New Restaurant', new_place_path %>
-
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Text</th>
-        <th></th>
-    </tr>
-
-    <% @places.each do |place| %>
-        <tr>
-            <td><%= place.title %></td>
-            <td><%= place.text %></td>
-            <td><%= link_to 'Show', place_path(place) %></td>
-            <td><%= link_to 'Edit', edit_place_path(place) %></td>
-            <td><%= link_to 'Destroy', place_path(place), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-    <% end %>
-<table>
-
-<p class="container fill">
-    <div id='indexMap'></div>
-</p>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <span class="navbar-text"><h4>RestoMap Places</h4></span>
+</nav>
+<div class="container-fluid" style="margin-top: 10px">
+    <div class="row">
+        <div id="upperInfo" class="col-sm-4">
+            <ul class="list-group">
+            <% @places.each do |place| %>
+                <li class="list-group-item align-items-left">
+                    <%= place.title %><br>
+                    <span class="badge badge-info"><%= place.text %></span><br>
+                    <%= link_to 'Show', place_path(place) %>
+                    <%= link_to 'Edit', edit_place_path(place) %>
+                    <%= link_to 'Destroy', place_path(place), method: :delete, data: { confirm: 'Are you sure?' } %>
+                </li>
+            <% end %>
+            </ul>
+            <%= link_to 'New Restaurant', new_place_path %>
+        </div>
+        <div id="mapZone" class="col-sm-8">
+            <div class="">
+                <div id="indexMap" class=""></div>
+            </div>
+        </div>
+    </div>
+</div>

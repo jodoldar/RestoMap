@@ -39,13 +39,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Allows to use Leaflet.js library lo load OSM into views
 gem 'leaflet-rails'
 
-# Add Bootstrap and its dependency jQuery & PopperJS for frontend
-gem 'popper_js', '~> 1.14.5'
-
-gem 'bootstrap-sass'
-
-gem 'jquery-rails'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
