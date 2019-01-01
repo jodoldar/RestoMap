@@ -47,6 +47,8 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    bcrypt (3.1.12)
+    bcrypt (3.1.12-x86-mingw32)
     bindex (0.5.0)
     bootsnap (1.3.2)
       msgpack (~> 1.0)
@@ -129,6 +131,10 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.2.2)
       sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.4)
+      actionpack (>= 5.0.1.x)
+      actionview (>= 5.0.1.x)
+      activesupport (>= 5.0.1.x)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -195,6 +201,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
@@ -206,6 +213,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.0)
+  rails-controller-testing
   sass-rails (~> 5.0)
   selenium-webdriver
   turbolinks (~> 5)
