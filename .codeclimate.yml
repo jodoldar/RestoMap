@@ -22,8 +22,6 @@ plugins:
     checks:
       Rubocop/Style/RedundantReturn:
         enabled: false
-
-engines:
   duplication:
     enabled: true
     config:
