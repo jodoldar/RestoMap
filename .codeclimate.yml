@@ -22,12 +22,14 @@ plugins:
     checks:
       Rubocop/Style/RedundantReturn:
         enabled: false
+      Rubocop/Style/ClassAndModuleChildren:
+        enabled: false
   duplication:
     enabled: true
     config:
       languages:
         ruby:
-          mass_threshold: 20
+          mass_threshold: 32
 
 ratings:
   paths:
