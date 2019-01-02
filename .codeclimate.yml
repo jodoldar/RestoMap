@@ -28,6 +28,6 @@ ratings:
   - "**.css"
   - "**.js"
 exclude_paths:
-- config/
+- public/assets/
 - db/
 - spec/
