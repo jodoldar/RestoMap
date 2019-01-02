@@ -31,3 +31,4 @@ exclude_paths:
 - public/assets/
 - db/
 - spec/
+- config/

@@ -835,7 +835,7 @@ Style/ClassAndModuleChildren:
   #   end
   #
   # The compact style is only forced, for classes or modules with one child.
-  EnforcedStyle: nested
+  EnforcedStyle: compact
   SupportedStyles:
     - nested
     - compact
@@ -1199,7 +1199,7 @@ Style/RaiseArgs:
 
 Style/RedundantReturn:
   # When `true` allows code like `return x, y`.
-  AllowMultipleReturnValues: false
+  AllowMultipleReturnValues: true
 
 # Use `/` or `%r` around regular expressions.
 Style/RegexpLiteral:
