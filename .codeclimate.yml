@@ -19,6 +19,17 @@ plugins:
   rubocop:
     enabled: true
     config: ".rubocop.yml"
+    checks:
+      Rubocop/Style/RedundantReturn:
+        enabled: false
+
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        ruby:
+          mass_threshold: 20
 
 ratings:
   paths:
