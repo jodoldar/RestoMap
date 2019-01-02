@@ -1,5 +1,21 @@
 ---
 plugins:
+  brakeman:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  csslint:
+    enabled: true
+  eslint:
+    enabled: true
+    exclude_paths:
+    - public/
+    - vendor/
+  fixme:
+    enabled: true
+    exclude_patterns:
+    - ".rubocop_enabled.yml"
+    - ".rubocop.yml"
   rubocop:
     enabled: true
     checks:
@@ -7,3 +23,15 @@ plugins:
         enabled: false
       Rubocop/Style/SymbolArray:
         enabled: false
+
+ratings:
+  paths:
+  - Gemfile.lock
+  - "**.erb"
+  - "**.rb"
+  - "**.css"
+  - "**.js"
+exclude_paths:
+- config/
+- db/
+- spec/
