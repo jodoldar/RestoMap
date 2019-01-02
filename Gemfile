@@ -45,6 +45,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'rails-controller-testing'
+  gem 'rubocop', require: false
+  gem 'simplecov', require: false
 end
 
 group :development do
