@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require leaflet
+//= require places
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
