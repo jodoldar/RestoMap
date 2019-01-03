@@ -37,7 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 # Allows to use Leaflet.js library lo load OSM into views
-# gem 'leaflet-rails'
+gem 'leaflet-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
