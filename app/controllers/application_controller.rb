@@ -2,5 +2,6 @@
 
 # Default controller
 class ApplicationController < ActionController::Base
-  # Nothing to do here
+  protect_from_forgery with: :exception
+  include SessionsHelper
 end

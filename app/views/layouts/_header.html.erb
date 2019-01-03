@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <%= link_to 'RestoMap Places', places_path, class: 'navbar-brand' %>
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav navbar-right ml-auto">
+            <% if logged_in? %>
+                <li class="nav-item">
+                    <%= link_to 'Users', '#', class: 'nav-link' %>
+                </li>
+                <li class="nav-item drowpown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+                        Account
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><%= link_to 'Profile', current_user, class: 'dropdown-item' %></li>
+                        <li><%= link_to 'Settings', '#', class: 'dropdown-item' %></li>
+                        <li role="separator" class="dropdown-divider"></li>
+                        <li><%= link_to 'Log out', logout_path, method: :delete, class: 'dropdown-item' %></li>
+                    </ul>
+                </li>
+            <% else %>
+                <li class="nav-item">
+                    <%= link_to 'Log-In', login_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Sign-Up', signup_path, class: "nav-link" %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</nav>
