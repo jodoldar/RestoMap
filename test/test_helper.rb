@@ -13,7 +13,7 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Returns true if a test user is logged in, false otherwise.
-  def is_logged_in?
+  def logged_in_test?
     !session[:user_id].nil?
   end
 end
