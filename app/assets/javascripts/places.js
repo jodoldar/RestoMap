@@ -1,5 +1,3 @@
-//= require leaflet.js
-
 function showMap(lat, lng) {
     var myCoords = L.latLng(lat,lng);
 

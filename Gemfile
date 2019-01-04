@@ -39,8 +39,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Allows to use Leaflet.js library lo load OSM into views
 gem 'leaflet-rails'
 
-gem 'sprockets'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
